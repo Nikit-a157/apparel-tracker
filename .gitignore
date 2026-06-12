@@ -1,0 +1,11 @@
+# Build files
+target/
+*.jar
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# Local testing data
+frontend/data/*.json

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apparel Price Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Price Tracker Dashboard</h1>
+        <p>Monitoring fashion items across Amazon, Myntra, and Flipkart.</p>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Add New Item to Track</h2>
+            <form id="add-item-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="itemName">Item Name</label>
+                        <input type="text" id="itemName" placeholder="e.g., Roadster Black T-Shirt" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="targetPrice">Target Price (₹)</label>
+                        <input type="number" id="targetPrice" placeholder="e.g., 600" required>
+                    </div>
+                </div>
+                <div class="form-group"><label>Amazon URL</label><input type="url" id="amazonUrl"></div>
+                <div class="form-group"><label>Myntra URL</label><input type="url" id="myntraUrl"></div>
+                <div class="form-group"><label>Flipkart URL</label><input type="url" id="flipkartUrl"></div>
+                
+                <hr style="border: 0; height: 1px; background: #eee; margin: 1.5rem 0;">
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="userEmail">Alert Email (Optional)</label>
+                        <input type="email" id="userEmail" placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="schedulePref">Background Scheduler</label>
+                        <select id="schedulePref" style="padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px;">
+                            <option value="none">Manual Scrape Only</option>
+                            <option value="12h">Scan every 12 Hours</option>
+                            <option value="24h">Scan every 24 Hours</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-submit">SUBMIT</button>
+            </form>
+        </section>
+
+        <hr class="divider">
+
+        <section class="update">
+            <h2>Currently Tracking</h2>
+            <div class="grid-container" id="tracked-items-container">
+                
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
