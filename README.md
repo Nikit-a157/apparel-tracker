@@ -12,8 +12,6 @@ A full-stack, serverless application that tracks apparel prices across e-commerc
   * **SES:** Transactional email pipeline
 
 
-
-
 ## Architecture Overview
 * **Dual-Brain Synchronization:** Items added via the local Java terminal instantly push payloads to the AWS Cloud, and vice versa.
 * **Serverless API:** The frontend communicates with a decoupled AWS Lambda backend via API Gateway, bypassing CORS restrictions.

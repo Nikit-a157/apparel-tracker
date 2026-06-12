@@ -1,11 +1,16 @@
-# Build files
+# Maven Build Files
 target/
 *.jar
 
-# IDE files
+# Local Tracking Data
+tracked_items.json
+latest_prices.json
+
+# IDE Configurations
 .vscode/
 .idea/
-*.iml
+*.class
 
-# Local testing data
-frontend/data/*.json
+# OS Generated Files
+.DS_Store
+Thumbs.db

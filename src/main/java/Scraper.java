@@ -229,6 +229,9 @@ public class Scraper {
         System.out.println("\nBooting Selenium WebDriver Environment...");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
+        options.addArguments("--disable-gpu"); // Required for headless mode
+        options.addArguments("--no-sandbox"); // Bypass OS security model (required in Docker)
+        options.addArguments("--disable-dev-shm-usage"); // Prevent out-of-memory crashes on Linux servers
         options.addArguments("--disable-blink-features=AutomationControlled");
         options.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36");
 
